@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{categoryContent.title}}</h1>
+      <p>{{categoryContent.description}}</p>
+    </div>
+  </div>
+  <div class="row">
+    @for (item of categoryContent.featuresProducts;track  item.name) {
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <img src="https://picsum.photos/200/300" class="card-img-top" alt="{{item.name}}">
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text">{{item.description}}</p>
+            <a routerLink="/product"  class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
+
+

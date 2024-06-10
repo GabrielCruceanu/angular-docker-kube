@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+      <img src="https://picsum.photos/800/400" class="img-fluid" alt="{{productContent.title}}">
+    </div>
+    <div class="col-md-12">
+      <h1>{{productContent.title}}</h1>
+      <h2>{{productContent.description}}</h2>
+    </div>
+  </div>
+  <div class="row">
+    @for (item of productContent.features;track  item) {
+      <ul>
+        <li>{{item}}</li>
+      </ul>
+    }
+  </div>
+</div>
